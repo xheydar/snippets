@@ -1,0 +1,6 @@
+irc :
+  address: irc.chat.twitch.tv
+  port: 6667
+  channel_name: xheydar
+  nick_name: StreamPleat
+  oauth: oauth:hhbmyptwwk4uon5ar7nfegytxc3b4i

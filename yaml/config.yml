@@ -1,0 +1,10 @@
+server:
+  address: localhost
+  username: heydar
+  password: password
+
+values: [ 10, 11, 23, 45 ]
+
+vv: 434
+
+vs: heydar

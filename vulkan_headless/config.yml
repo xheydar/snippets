@@ -1,0 +1,57 @@
+pipelines :
+  with_light:
+    vert : "../extra/shaders/tri_mesh.vert.spv" 
+    frag : "../extra/shaders/tri_mesh.frag.spv"
+  without_light:
+    vert : "../extra/shaders/tri_mesh_nl.vert.spv"
+    frag : "../extra/shaders/tri_mesh_nl.frag.spv"
+  only_color :
+    vert : "../extra/shaders/tri_mesh_color.vert.spv"
+    frag : "../extra/shaders/tri_mesh_color.frag.spv"
+
+meshes :
+  fox_low_ploy : 
+    type : obj
+    path_obj : "../extra/objs/low-poly-fox-by-pixelmannen.obj"
+    path_mtl : "../extra/objs/low-poly-fox-by-pixelmannen.mtl"
+    normalize : true
+  image_frame :
+    type : named
+    name : frame
+    normalize : false
+
+textures :
+  fox_original : 
+    path : "../extra/objs/texture_original.png"
+  fox_test1 : 
+    path : "../extra/objs/texture_test1.png"
+  fox_test2 : 
+    path : "../extra/objs/texture_test2.png"
+
+objects :
+  fox_original :
+    mesh : fox_low_ploy
+    texture: fox_original
+    pipeline: with_light
+    always_alive: false
+    seconds_alive: 10
+    pretty_name: "Fox Original"
+    token_value: 100
+    
+  fox_test1 :
+    mesh : fox_low_ploy
+    texture : fox_test1
+    pipeline : without_light
+    always_alive: false
+    seconds_alive: 10
+    pretty_name: "Fox Test 1"
+    token_value: 100
+
+  fox_test2 :
+    mesh : fox_low_ploy
+    pipeline : only_color
+    always_alive: false
+    seconds_alive: 10
+    pretty_name: "Fox No Texture"
+    token_value: 100
+

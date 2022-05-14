@@ -1,0 +1,8 @@
+
+
+
+gst-launch-1.0 autovideosrc device=/dev/video0 ! videoconvert ! clockoverlay ! x264enc tune=zerolatency ! mpegtsmux ! hlssink playlist-root=http://127.0.0.1:8000 location=/Users/heydar/segment_%05d.ts target-duration=1 max-files=5
+
+start an httpserver to read the files :
+
+python -m SimpleHTTPServer

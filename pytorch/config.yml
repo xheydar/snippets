@@ -1,0 +1,11 @@
+detection:
+    model_path: "/Users/heydar/Work/void/nr/models/personface/20220102/model_cpu.ts"
+    max_side: 512
+    score_thresh: 0.05
+    nms_thresh: 0.5
+    image_mean: [0.485, 0.456, 0.406]
+    image_std: [0.229, 0.224, 0.225]
+    unified_rois: false
+    class_names: 
+        0: "person" 
+        1: "face"

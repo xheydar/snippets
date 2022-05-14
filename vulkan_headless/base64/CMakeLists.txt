@@ -1,0 +1,3 @@
+cmake_minimum_required(VERSION 3.4.0 FATAL_ERROR)
+
+add_library(base64 base64.cpp)
